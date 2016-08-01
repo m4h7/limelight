@@ -1,0 +1,28 @@
+{
+  "name": "psk-gql",
+  "version": "1.0.0",
+  "description": "GraphQL backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node ./index.js",
+    "update-schema": "babel-node ./scripts/updateSchema.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "babel-register": "^6.11.5",
+    "bluebird": "^3.4.1",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "dataloader": "^1.2.0",
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.3",
+    "graphql": "^0.6.2",
+    "pg": "^6.0.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0"
+  }
+}
