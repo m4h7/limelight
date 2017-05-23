@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import schema from './schema';
 import {dbConnect} from './dbloader';
+import http from 'http';
 
 function server() {
   const dbPool = dbConnect();
@@ -22,4 +23,11 @@ function server() {
   return app;
 }
 
-export default server;
+function run() {
+  let app = server();
+
+  http.createServer(app).listen(3000);
+  console.log("server created");
+}
+
+export { run };
